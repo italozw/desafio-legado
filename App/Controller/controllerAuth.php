@@ -43,7 +43,7 @@ class controllerAuth extends controller{
 
         if(!$usuario || !hashSenha::verificar($senha, $usuario['senha'])) {
             auth::flash('erro', 'Email ou senha inválidos');
-            $this->redirecionar('/cadastro/index');
+            $this->redirecionar('/login');
         }
 
         $lembrarAcesso = isset($_POST['lembrarAcesso']);
